@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Grocery</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-success text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3">Organic Grocery</h1>
+                <img src="organic logo.png" alt="Description of image" id="org-img">
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
+                        <li class="nav-item"><a href="#products" class="nav-link text-white">Products</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h2>Fresh, Organic, and Healthy</h2>
+            <p>Your one-stop shop for all organic groceries.</p>
+            <a href="#products" class="btn btn-dark">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Our Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <img src="Vegetables.jpeg"  alt="Description of image" id="veg-img">
+                            <h3 class="card-title">Organic Vegetables</h3>
+                            <p class="card-text">Fresh and organic vegetables directly from the farm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <img src="Fruits.jpeg"  alt="Description of image" id="fruits-img">
+                            <h3 class="card-title">Organic Fruits</h3>
+                            <p class="card-text">Sweet and juicy organic fruits for a healthy lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <img src="Dairy.jpeg"  alt="Description of image" id="dairy-img">
+                            <h3 class="card-title">Organic Dairy</h3>
+                            <p class="card-text">High-quality organic dairy products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">We are dedicated to providing the best organic products to support a healthy lifestyle.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>"Amazing quality and freshness!" - Jane Doe</p>
+                </div>
+                <div class="col-md-6">
+                    <p>"I love the variety of organic products available." - John Smith</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>Contact us at <a href="mailto:info@organicgrocery.com" class="text-white">info@organicgrocery.com</a></p>
+            <p>&copy; 2024 Organic Grocery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
